@@ -1,0 +1,384 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: #0c111b;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+}
+.navbar {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: -1%;
+  left: 0;
+  padding: 0;
+  background-color: #0c111b;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 15px;
+  height: 65px;
+}
+
+.nav-links {
+  margin-top: 10px;
+  display: flex;
+  list-style: none;
+}
+
+.nav-items a {
+  text-decoration: none;
+  margin-left: 25px;
+  color: whitesmoke;
+  opacity: 0.8;
+  font-size: 15px;
+  font-weight: 200;
+}
+
+.right-container {
+  display: block;
+  margin-left: auto;
+}
+
+.search-bar {
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+  outline: none;
+  height: 30px;
+  color: rgba(255, 255, 255, 0.6);
+  width: 200px;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s;
+  font-family: "Roboto", sans-serif;
+}
+
+.search-bar:focus {
+  width: 280px;
+  border-color: #1f80e0;
+}
+
+.subscribe-btn {
+  background-color: #1f80e0;
+  border-radius: 4px;
+  color: aliceblue;
+  font-weight: bolder;
+  margin: 0 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 10.8px;
+  padding-top: 1.2px;
+  height: 21px;
+  border: none;
+  outline: none;
+}
+
+.subscribe-btn:hover {
+  opacity: 0.9;
+}
+.login-link {
+  color: rgb(207, 197, 197);
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 12px;
+  margin-right: 40px;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  padding: 20px 0;
+  overflow-x: hidden;
+  margin-top: 80px;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  width: 92%;
+  height: 100%;
+  margin: auto;
+}
+
+.slider {
+  flex: 0 0 auto;
+  margin-right: 30px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  transition: 1s;
+  overflow: hidden;
+}
+
+.slider img {
+  width: 70%;
+  min-height: 100%;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+}
+
+.slide-content {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(to right, #030b17 65%, #0c111b00);
+  color: white;
+  /* font-size: 15px; */
+}
+
+.movie-title {
+  padding-left: 50px;
+  text-transform: capitalize;
+  margin-top: 80px;
+  font-weight: 900;
+  width: 63%;
+}
+
+.movie-description {
+  width: 63%;
+  line-height: 25px;
+  padding-left: 50px;
+  margin-top: 30px;
+  opacity: 0.8;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.video-card-container {
+  position: relative;
+  width: 92%;
+  margin: auto;
+  height: 21vh;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.video-card {
+  position: relative;
+  min-width: calc(100% / 5 - 10px);
+  width: calc(100% / 5 - 10px);
+  height: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #030b17;
+}
+
+.video-card-img,
+.card-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-video {
+  position: absolute;
+}
+
+.video-card:hover .video-card-img {
+  display: none;
+}
+
+.title {
+  text-decoration: none;
+  color: white;
+  opacity: 0.9;
+  padding-left: 3%;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 900;
+}
+.title:hover {
+  color: #1f80e0;
+}
+.movies-list {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  margin: 10px 0;
+  padding-left: 28px;
+}
+
+.card-container {
+  width: 92%;
+  padding-left: 10px;
+  height: 220px;
+  display: flex;
+  margin: 0 5px; /* or auto*/
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  position: relative;
+  min-width: 130px;
+  width: 130px;
+  height: 180px;
+  border-radius: 7px;
+  overflow: hidden;
+  margin-right: 10px;
+  transition: 0.5s;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+.card:hover .card-body {
+  opacity: 1;
+}
+.card-body {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 70%);
+  padding: 10px;
+  transition: 0.5s;
+}
+.name {
+  color: wheat;
+  font-size: 9px;
+  text-transform: capitalize;
+  margin-top: 70%;
+  font-weight: 900;
+}
+/* .buttons {
+  margin-top: 8px;
+  align-items: baseline;
+} */
+.des {
+  color: white;
+  opacity: 0.8;
+  margin-top: 4px;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.watchlist-btn {
+  position: relative;
+  width: 100%;
+  text-transform: capitalize;
+  background: none;
+  border: none;
+  font-weight: bolder;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 2px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+.watch-btn {
+  position: relative;
+  width: 100%;
+  text-transform: capitalize;
+  background: none;
+  border: none;
+  font-weight: bolder;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 2px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 10px;
+}
+.watch-btn i {
+  margin-right: 5px;
+  font-size: 10px;
+}
+
+.watch-btn:hover {
+  padding: 0 5px;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* .watchlist-btn::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: -3px;
+  height: 20px;
+  width: 20px;
+  background-image: url(images/add.png);
+  background-size: cover;
+  transform: scale(0.4);
+} */
+
+.watchlist-btn i {
+  margin-right: 6px;
+}
+
+.watchlist-btn:hover {
+  padding: 0 5px;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 0;
+  width: 5%;
+  height: 100%;
+  z-index: 2;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.prev-button {
+  left: 0;
+  background: linear-gradient(to right, #0c111b 0%, #0c111b00);
+}
+
+.next-button {
+  margin-right: 30px;
+  right: 0;
+  background: linear-gradient(to right, #0c111b 0%, #0c111b00);
+}
+
+.prev-button img,
+.next-button img {
+  width: 15px;
+  height: 20px;
+  opacity: 0;
+}
+
+.prev-button:hover img,
+.next-button:hover img {
+  opacity: 1;
+}
